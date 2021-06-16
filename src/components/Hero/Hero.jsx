@@ -1,13 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
-import { Link } from 'react-scroll';
-import TextLoop from "react-text-loop";
+import { ScrollLink } from 'react-scroll';
+import TextLoop from 'react-text-loop';
 import PortfolioContext from '../../context/context';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  // const { title, name, subtitle, cta } = hero;
+  const { title, name, cta } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -29,21 +30,21 @@ const Header = () => {
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
-            <br />          
-            I'm the {" "}
+            <br />
+            I&apos;m the{' '}
             <TextLoop>
-              <span>{"Unknown Developer."}</span>                  
-              <span>{"Missing Developer."}</span>
-              <span>{"Unicorn Developer."}</span>
-                </TextLoop>
+              <span>Unknown Developer.</span>
+              <span>Missing Developer.</span>
+              <span>Unicorn Developer.</span>
+            </TextLoop>
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
             <span className="cta-btn cta-btn--hero">
-              <Link to="about" smooth duration={1000}>
+              <ScrollLink to="about" smooth duration={1000}>
                 {cta || 'Know more'}
-              </Link>
+              </ScrollLink>
             </span>
           </p>
         </Fade>

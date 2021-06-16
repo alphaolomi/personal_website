@@ -15,8 +15,8 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: url(../images/cursors/cursor1x.png) 6 6, default;
-  cursor: -webkit-image-set(url(../images/cursors/cursor1x.png) 1x, url(../images/cursors/cursor2x.png) 2x) 6 6, default;
+  // cursor: url(../images/cursors/cursor1x.png) 6 6, default;
+  // cursor: -webkit-image-set(url(../images/cursors/cursor1x.png) 1x, url(../images/cursors/cursor2x.png) 2x) 6 6, default;
 }
 
 // 
@@ -63,8 +63,8 @@ a,
 a:after,
 a:visited {
     background-color: transparent;
-    cursor: url(../images/cursors/cursor-fill1x.png) 6 6, auto;
-    cursor: -webkit-image-set(url(../images/cursors/cursor-fill1x.png) 1x, url(../images/cursors/cursor-fill2x.png) 2x) 6 6, auto;
+    // cursor: url(../images/cursors/cursor-fill1x.png) 6 6, auto;
+    // cursor: -webkit-image-set(url(../images/cursors/cursor-fill1x.png) 1x, url(../images/cursors/cursor-fill2x.png) 2x) 6 6, auto;
     text-decoration: none;
     color: #000
 }
